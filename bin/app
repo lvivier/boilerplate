@@ -1,0 +1,37 @@
+#!/usr/bin/env node
+
+/**
+ * Dependencies
+ */
+var debug = require('debug')('app')
+  , cli = require('commander')
+  , app = require('boot')
+
+/**
+ * Application
+ */
+cli.option('-p, --port <n>', 'set port [3000]', parseInt)
+   .parse(process.argv)
+
+app.set('port', cli.port || process.env.PORT || 3000)
+   .listen(app.get('port'), listen)
+
+process.on('SIGINT',  quit)
+process.on('SIGTERM', quit)
+process.on('uncaughtException', die)
+
+
+function listen () {
+  debug('listening on port %d', app.get('port'))
+}
+
+function quit () {
+  debug('quitting')
+  process.exit(0)
+}
+
+function die (err) {
+  debug('unexpected quit')
+  console.error(err)
+  process.exit(1)
+}

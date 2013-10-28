@@ -1,0 +1,12 @@
+
+extends ../views/layout
+prepend meta
+  title= err.reason
+
+block body
+  h1 #{err.status} 
+    strong= err.reason
+  h2= err.message
+
+  if err.stack
+    pre= err.stack

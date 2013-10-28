@@ -1,0 +1,5 @@
+{
+  "name": "error",
+  "main": "error.js",
+  "scripts": ["error.js", "factory.js"]
+}
