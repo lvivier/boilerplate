@@ -3,7 +3,9 @@
 /**
  * Dependencies
  */
-var debug = require('debug')('app')
+var error = require('debug')('app:error')
+  , debug = require('debug')('app')
+  , formatError = require('log').formatError
   , cli = require('commander')
   , app = require('boot')
 
@@ -20,7 +22,6 @@ process.on('SIGINT',  quit)
 process.on('SIGTERM', quit)
 process.on('uncaughtException', die)
 
-
 function listen () {
   debug('listening on port %d', app.get('port'))
 }
@@ -31,7 +32,7 @@ function quit () {
 }
 
 function die (err) {
-  debug('unexpected quit')
-  console.error(err)
+  error(formatError(err))
+  debug('uncaught exception, quitting')
   process.exit(1)
 }
