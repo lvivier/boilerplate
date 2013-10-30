@@ -1,10 +1,6 @@
 {
   "name": "boot",
   "main": "boot.js",
-  "local": ["error"],
   "scripts": ["boot.js"],
-  "styles":  ["index.styl"],
-  "dependencies": {
-    "netwjx/debug": "*"
-  }
+  "local": ["app"]
 }

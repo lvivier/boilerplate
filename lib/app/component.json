@@ -1,0 +1,10 @@
+{
+  "name": "app",
+  "main": "app.js",
+  "local": ["error"],
+  "scripts": ["app.js"],
+  "styles":  ["app.styl"],
+  "dependencies": {
+    "netwjx/debug": "*"
+  }
+}

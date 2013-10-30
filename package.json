@@ -5,7 +5,7 @@
   "description": "Express boilerplate",
   "author": "Luke Vivier <luke@vivier.ca>",
   "main": "lib/boot",
-  "bin": "bin/app",
+  "scripts": {"start": "NODE_PATH=lib node lib/boot"},
   "dependencies": {
     "component-stylus-plugin": "~0.2.4",
     "component-builder": "~0.10.0",

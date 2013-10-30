@@ -9,11 +9,11 @@ clean:
 	@rm -rf public
 
 run:
-	@NODE_ENV=production NODE_PATH=lib DEBUG=app,app:* bin/app
+	@NODE_ENV=production DEBUG=app,app:* npm start
 
 dev:
 	@NODE_PATH=lib DEBUG=$(DEBUG),app,app:* DEBUG_COLORS=true \
-	nodemon -q -w lib -w bin -x bin/app
+	nodemon -q -w lib -w bin
 
 debug:
-	@NODE_PATH=lib DEBUG=* bin/app
+	DEBUG=* npm start
