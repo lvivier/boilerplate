@@ -16,6 +16,7 @@
     "debug": "~0.7.2",
     "jade": "~0.35.0",
     "bytes": "~0.2.1",
-    "parse-stack": "~0.1.1"
+    "parse-stack": "~0.1.1",
+    "rimraf": "~2.2.2"
   }
 }
