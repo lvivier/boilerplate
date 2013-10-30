@@ -6,7 +6,7 @@ install:
 clean:
 	@rm -rf components
 	@rm -rf node_modules
-	@rm -rf public
+	@rm -rf tmp
 
 run:
 	@NODE_ENV=production DEBUG=app,app:* npm start
