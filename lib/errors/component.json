@@ -1,0 +1,6 @@
+{
+  "name": "errors",
+  "main": "errors.js",
+  "dependencies": {"lvivier/error": "*"},
+  "scripts": ["errors.js"]
+}
